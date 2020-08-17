@@ -33,7 +33,8 @@ function getCities(event) {
     var ufValue = event.target.value
     var url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`;
 
-    citySelect.innerHTML = "";
+    citySelect.innerHTML = "<option value>Selecione a Cidade</option>";
+    citySelect.disabled = true;
 
     fetch(url)
     .then(res => res.json())
@@ -44,4 +45,16 @@ function getCities(event) {
         }
         citySelect.disabled = false;
     })
+}
+
+var itensToCollect = document.querySelectorAll(".itens-grid li");
+
+for(var item of itensToCollect) {
+    item.addEventListener("click", handleSelectedItem);
+}
+
+function handleSelectedItem(event) {
+    var itemLi = event.target;
+    itemLi.classList.toggle("selected");
+    var itemId = itemLi.dataset.id;
 }
