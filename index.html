@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -27,6 +28,25 @@
         </div>
     </div>
 
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de Coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+            <form action="">
+                <label for="search">Cidade ou Estado</label>
+                <div class="search field">
+                    <input type="text" name="search" placeholder="Digite a Cidade ou o Estado">
+                    <button>
+                        <img src="../ecoleta/images/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../ecoleta/javascript/index.js"></script>
     
 </body>
 </html>

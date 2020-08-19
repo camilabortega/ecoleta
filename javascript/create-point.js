@@ -53,8 +53,29 @@ for(var item of itensToCollect) {
     item.addEventListener("click", handleSelectedItem);
 }
 
+let collectedItens = document.querySelector("input[name=itens]");
+
+let selectedItens = [];
+
 function handleSelectedItem(event) {
-    var itemLi = event.target;
+    let itemLi = event.target;
     itemLi.classList.toggle("selected");
-    var itemId = itemLi.dataset.id;
+    let itemId = itemLi.dataset.id;
+
+    let alreadySelected = selectedItens.findIndex(item => {
+        let itemFound = item === itemId;
+        return itemFound;
+});
+
+if(alreadySelected >= 0) {
+    let filteredItens = selectedItens.filter(item => {
+        let itemIsDifferent = item !== itemId;
+        return itemIsDifferent
+    })
+
+    selectedItens = filteredItens;
+} else {
+    selectedItens.push(itemId);
+}
+    collectedItens.value = selectedItens;
 }
