@@ -1,0 +1,86 @@
+body::after {
+    content: "";
+    position: fixed;
+    background: white;
+    top: 280px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#page-search-results {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-search-results header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-search-results header a {
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#page-search-results header a span {
+    background-image: url("../images/arrow-left.svg");
+    width: 20px;
+    height: 24px;
+    display: flex;
+    margin-right: 16px;
+}
+
+#page-search-results main {
+    margin-top: 48px;
+}
+
+#page-search-results main h4 {
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 32px;
+}
+
+#page-search-results main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+#page-search-results main .cards .card .image {
+    display: block;
+    height: 150px;
+    width: 100%;
+    background: url("https://via.placeholder.com/400x150") no-repeat center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+#page-search-results main .cards .card h1 {
+    margin-top: 32px;
+    font-size: 36px;
+    line-height: 41px;
+    color: var(--title-color);
+}
+
+#page-search-results main .cards .card h3 {
+    margin: 24px 0;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--primary-color);
+}
+
+#page-search-results main .cards .card p {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Roboto, sans-serif;
+    color: #6c6c80;
+}
