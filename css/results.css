@@ -38,7 +38,7 @@ body::after {
 }
 
 #page-search-results main {
-    margin-top: 48px;
+    margin: 48px;
 }
 
 #page-search-results main h4 {
@@ -51,6 +51,11 @@ body::after {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
+}
+@media (max-width: 900px) {
+    #page-search-results main .cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 #page-search-results main .cards .card .image {
