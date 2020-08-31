@@ -79,3 +79,22 @@ if(alreadySelected >= 0) {
 }
     collectedItens.value = selectedItens;
 }
+
+axios.get("../javascript/categories.json")
+.then(function(response){
+    let itensGrid = document.querySelector(".itens-grid");
+    let categories = response.data;
+
+    for(category of categories){
+        let li = document.createElement("li");
+        li.setAttribute("data-id", category.id);
+        li.innerHTML = `
+        <img src="../${category.icon}" alt="${category.name}">
+        <span>${category.name}</span>`;
+
+        itensGrid.append(li);
+    }
+})
+.catch(function(){
+    alert("Erro ao recuperar as categorias");
+})

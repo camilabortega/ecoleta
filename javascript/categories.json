@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "icon": "images/lampadas.svg",
+      "name": "Lâmpadas"
+    },
+    {
+      "id": 2,
+      "icon": "images/baterias.svg",
+      "name": "Pilhas e Baterias"
+    },
+    {
+      "id": 3,
+      "icon": "images/papeis-papelao.svg",
+      "name": "Papéis e Papelão"
+    },
+    {
+      "id": 4,
+      "icon": "images/eletronicos.svg",
+      "name": "Resíduos Eletrônicos"
+    },
+    {
+      "id": 5,
+      "icon": "images/organicos.svg",
+      "name": "Resíduos Orgânicos"
+    },
+    {
+      "id": 6,
+      "icon": "images/oleo.svg",
+      "name": "Óleo de Cozinha"
+    }
+  ]
