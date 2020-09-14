@@ -128,7 +128,7 @@ form.onsubmit = function(event){
         data: send
     })
     .then(function(){
-        alert("Ponto cadastrado com sucesso");
+        document.querySelector("#modal").classList.toggle("hide");
         let inputs = document.querySelectorAll("input");
         for (input of inputs){
             input.value = "";
@@ -142,9 +142,21 @@ form.onsubmit = function(event){
         city.innerHTML = "";
         city.append(option);
         city.disabled = true;
+
+        selectedItens = [];
+
+        let liSelected = document.querySelectorAll(".itens-grid li.selected");
+        for (li of liSelected){
+            li.classList.toggle("selected");
+        }
     })
     .catch(function(error){
         console.log(error);
         alert("Erro ao salvar");
     })
+}
+
+let a = document.querySelector("#modal a");
+a.onclick = function(){
+    document.querySelector("#modal").classList.toggle("hide");
 }

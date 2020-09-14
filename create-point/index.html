@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/create-point.css">
+        <link rel="stylesheet" href="../css/modal.css">
     </head>
     
     <body>
@@ -71,6 +72,15 @@
 
                     <button type="submit">Cadastrar ponto de coleta</button>
                 </form>
+        </div>
+
+        <div id="modal" class="hide">
+            <div class="content">
+                <div class="header">
+                    <h1>Ponto cadastrado com sucesso</h1>
+                    <a href="#">Fechar</a>
+                </div>
+            </div>
         </div>
     
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
