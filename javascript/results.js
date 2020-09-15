@@ -30,8 +30,3 @@ axios.get("http://ecoleta-database.herokuapp.com/points?q=" + search)
     .catch(function (error) {
         console.log(error);
     })
-
-
-{/* <div class="card">
-                            
-                        </div> */}
